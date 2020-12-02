@@ -8,6 +8,10 @@ button, tr{
    cursor:pointer;
 }
 
+.button-right {
+    display: flex;
+    justify-content: flex-end;
+}
 .button-ref {
     height: 40px;
     width: 40px;
@@ -30,8 +34,14 @@ button, tr{
     .text-align-center {
         text-align: center;
     }
-text-align-right{
-    text-align:right!important;
+.button-right-bottom{
+    padding-top: 5px;
+}
+.choosetr {
+    background-color: #03c481;
+}
+.text-align-right {
+    text-align: right !important;
 }
 .content {
     width: 100%;
@@ -52,8 +62,6 @@ text-align-right{
         }
 
         .content .action .button {
-            display: flex;
-            justify-content: flex-end;
             width: 50%;
         }
 
@@ -69,7 +77,7 @@ text-align-right{
             cursor: pointer;
         }
 
-        .content .action .add-button button {
+        .content .action .button-add button {
             height: 40px;
             color: #fff;
             background-color: #01B075;
@@ -82,18 +90,18 @@ text-align-right{
             border: none;
             outline: none;
         }
-            .content .action .add-button button:hover {
-                background-color: #019160;
+            .content .action .button-add button:hover {
+                background-color: #008000;
             }
 
-            .content .action .add-button > i {
-                padding-right: 8px;
-            }
+        .content .action .button-add > i {
+            padding-right: 8px;
+        }
 
-            .content .action .add-button .down-button {
-                border-left: 1px solid #bbbbbb;
-                padding: 0px 12px;
-            }
+        .content .action .button-add .down-button {
+            border-left: 1px solid #bbbbbb;
+            padding: 0px 12px;
+        }
 
     .content .search {
         display: flex;
@@ -162,7 +170,7 @@ text-align-right{
 
     .content .content-table {
         width: calc(100% - 48px);
-        height: 700px;
+        height: 680px;
         margin: 24px;
         overflow-x: auto;
         overflow-y: auto;

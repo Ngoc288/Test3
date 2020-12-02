@@ -8,7 +8,7 @@ namespace MISA.ApplicationCore.Entities
     /// <summary>
     /// Thông tin nhân viên
     /// </summary>
-    /// CreatedBy: NVMANH (26/11/2020)
+    /// Createdby ngochtb (30/11/2020)
     public class Employee:BaseEntity
     {
         public Guid EmployeeId { get; set; }
@@ -45,8 +45,15 @@ namespace MISA.ApplicationCore.Entities
 
         public string Address { get; set; }
         public string PositionName { get; set; }
+        public Guid PositionId { get; set; }
         public string DepartmentName { get; set; }
+        public Guid DepartmentId { get; set; }
         public double? Salary { get; set; }
+        public string IdentityNumber { get; set; }
+        public DateTime? IdentityDate { get; set; }
+        public string IdentityPlace { get; set; }
+        public string PersonalTaxCode { get; set; }
+        public DateTime? JoinDate { get; set; }
 
         public WorkStatus? WorkStatus { get; set; }
 

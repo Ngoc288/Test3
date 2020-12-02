@@ -40,15 +40,24 @@ class BaseJS {
         //Sửa thông tin chi tiết khi nhấn đúp chuột chọn 1 bản ghi
         $('table tbody').on('dblclick', 'tr', function (e) {
             me.editData(e);
-            console.log(e, 'e edit')
         })
-    
-        //Xoá bản ghi khi click button xóa
-        $('#btnDel').click(function () {
-            dialogConfirm.dialog('open');
-            var idButtonSaveDelete = $(e.currentTarget).data('recordId');
-            $('#btnConfirm').attr('idItem', idButtonSaveDelete);
+
+        //Chọn 1 bản ghi để thực hiện thao tác xóa
+        $('table tbody').on('click', 'tr', function (e) {
+            $(this).find('td').addClass('choosetr');
+            if (click == $('#btnDel')) {
+                me.deleteData(e);
+            }
+            
+
+         /*   $('#btnDel').click(function () {
+                dialogConfirm.dialog('open');
+                var idButtonSaveDelete = $(e.currentTarget).data('recordId');
+                $('#btnConfirm').attr('idItem', idButtonSaveDelete);
+            })*/
+          
         })
+        
 
         //Ẩn form confirm
         $('#btnCFCancel').click(function () {
@@ -263,7 +272,6 @@ class BaseJS {
              $.each(selects, function (index, select) {
                  //Lấy dữ liệu nhóm khách hàng
                  var api = $(select).attr('api');
- 
                  var fieldName = $(select).attr('fieldName');
                  var fieldValue = $(select).attr('fieldValue');
                  $('loading').show();
@@ -294,12 +302,12 @@ class BaseJS {
                 url: me.host + me.apiRouter + `/${recordId}`,
                 method: "GET",
             }).done(function (res) {
-                debugger;
                 //Binding dữ liệu lên form chi tiết
-                var inputs = $('input[fieldName], select[fieldName]');
+                var inputs = $('.infor input, select[fieldName]');
                 var entity = {};
                 $.each(inputs, function (index, input) {
                     var propertyName = $(this).attr('fieldName');
+                    var propertyType = $(this).attr('type');
                     var value = res[propertyName];
 
                     //Load dữ liệu combobox
@@ -308,25 +316,14 @@ class BaseJS {
                         value = res[propValueName];
 
                     }
-
+                    ///Load lương cơ bản
+                    if (propertyName == 'Salary') {
+                        value = formatMoney(value) + " VNĐ";
+                    }
                     //Load dữ liệu ngày
-                    if (propertyName == 'DateOfBirth') {
+                    if (propertyType == 'date') {
                         value = formatDatePicker(value);
                     }
-
-                    //Load dữ liệu input
-                 /*   if ($(this).attr('type') == "radio") {
-                        var inputValue = this.value;
-                        if (value == inputValue) {
-                            this.checked = true;
-                        } else {
-                            this.checked = false;
-                        }
-                    }
-                    */
-                    //else {
-                    //    $(this).val(value);
-                    //}
                     $(this).val(value);
 
                 })
@@ -346,7 +343,7 @@ class BaseJS {
     deleteData(item) {
         try {
             var me = this;
-
+            me.FormMode = 'Delete';
             var id = $(item.currentTarget).attr('iditem');
 
              $.ajax({

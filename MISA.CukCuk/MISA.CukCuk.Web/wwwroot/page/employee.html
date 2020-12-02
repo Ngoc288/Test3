@@ -79,19 +79,20 @@
                     <span>Quản lý khách hàng</span>
                     <div class="button">
                         <!-- Button thêm mới-->
-                        <div class="add-button">
-                            <button id="btnAdd" class="button-left">
+                        <div class="button-right button-add">
+                            <button id="btnAdd">
                                 <i class="fas fa-users"></i>
                                 <span>Thêm nhân viên</span>
                             </button>
                         </div>
-                        <div>
+                        <div class="button-right button-right-bottom">
                             <!--  Button refresh-->
                             <button id="btnRef" class="button-ref"><i class="fas fa-sync-alt"></i></button>
                             <!--  Button delete-->
                             <button id="btnDel" class="button-del button-ref"><i class="fas fa-trash"></i></button>
                         </div>
                     </div>
+                    
                 </div>
                 <div class="search">
                     <div class="input-search">
@@ -124,7 +125,7 @@
                     <table cellspacing="0" width="100%">
                         <thead>
                             <tr>
-                               
+
                                 <th fieldName="EmployeeCode">Mã nhân viên</th>
                                 <th fieldName="FullName">Họ và tên</th>
                                 <th fieldName="GenderName">Giới tính</th>
@@ -141,7 +142,7 @@
                         </tbody>
                     </table>
                 </div>
-              <!--  Phân trang-->
+                <!--  Phân trang-->
                 <div class="paging-bar">
                     <div class="paging-record-info">
                         Hiển thị <b>1-10/1000</b> Khách hàng
@@ -165,14 +166,14 @@
             </div>
         </div>
     </div>
- <!--   Dialog thêm mới/chỉnh sửa-->
+    <!--   Dialog thêm mới/chỉnh sửa-->
     <div id="dialog-form" title="Quản lý khách hàng">
         <div class="infor">
-            
+
             <div class="display-flex">
                 <div class="avatar-left">
                     <div class="input-avt">
-                        <img  src="/content/image/default-avatar-profile-image-vector-social-media-user-icon-potrait-182347582.jpg"/>
+                        <img src="/content/image/default-avatar-profile-image-vector-social-media-user-icon-potrait-182347582.jpg" />
                     </div>
                     <div class="infor-avt">Vui lòng chọn ảnh có định dạng <b>.jpeg, .jpg, .png, .gif</b></div>
                 </div>
@@ -185,7 +186,7 @@
                         </div>
                         <div class="item item-birth">
                             <p>Họ và tên (<span style="color:red;">*</span>)</p>
-                            <input fieldName="FullName" class="style-input input-required" />
+                            <input type="text" fieldName="FullName" class="style-input input-required" />
                         </div>
                     </div>
                     <div class="display-flex">
@@ -205,7 +206,7 @@
                     <div class="display-flex">
                         <div class="item item-birth">
                             <p>Số chứng minh thư nhân dân</p>
-                            <input fieldName="IdentityNumber" class="style-input" />
+                            <input type="text" fieldName="IdentityNumber" class="style-input" />
                         </div>
                         <div class="item item-birth">
                             <p>Ngày cấp</p>
@@ -215,18 +216,18 @@
                     <div class="display-flex">
                         <div class="item item-birth">
                             <p>Nơi cấp</p>
-                            <input fieldName="IdentityPlace" class="style-input" />
+                            <input type="text" fieldName="IdentityPlace" class="style-input" />
                         </div>
                     </div>
 
                     <div class="display-flex">
                         <div class="item item-birth">
                             <p>Email  (<span style="color:red;">*</span>)</p>
-                            <input fieldName="Email" class="style-input input-required" />
+                            <input type="email" fieldName="Email" class="style-input input-required" />
                         </div>
                         <div class="item item-birth">
                             <p>Số điện thoại  (<span style="color:red;">*</span>)</p>
-                            <input fieldName="PhoneNumber" class="style-input input-required" />
+                            <input type="text" fieldName="PhoneNumber" class="style-input input-required" />
                         </div>
                     </div>
                     <div class="style-fontweight-bold">B. THÔNG TIN CÔNG VIỆC:<hr class="styleHr" /></div>
@@ -247,7 +248,7 @@
                         </div>
                         <div class="item item-birth">
                             <p>Mức lương cơ bản</p>
-                            <input fieldName="Salary" class="style-input" />
+                            <input type="text" fieldName="Salary" class="style-input" />
                         </div>
                     </div>
                     <div class="display-flex">
@@ -257,7 +258,8 @@
                         </div>
                         <div class="item item-birth">
                             <p>Tình trạng công việc</p>
-                            <select fieldName="WorkStatusName" class="style-input style-select">
+                            <select fieldName="WorkStatusName" fieldValue="WorkStatus" class="style-input style-select">
+                                <option value="0">Không xác định</option>
                                 <option value="1">Đã nghỉ việc</option>
                                 <option value="2">Đang làm việc</option>
                                 <option value="3">Đang thử việc</option>
@@ -267,8 +269,8 @@
                     </div>
                 </div>
             </div>
-           
-          
+
+
 
         </div>
         <div class="btn-bottom">
@@ -276,7 +278,7 @@
             <button id="btnSave" class="btn-bottom-save"><i class="far fa-save"></i><span class="btn-text">Lưu</span></button>
         </div>
     </div>
-<!--    Dialog thông báo xác nhận xoá-->
+    <!--    Dialog thông báo xác nhận xoá-->
     <div class="noti" id="dialog-confirm">
         <div class="text-noti">
             Bạn có chắc muốn xoá không?
@@ -284,7 +286,7 @@
         <div class="btn-bottom">
             <div class="group-footer-button">
                 <button class="btn-bottom-cancel" id="btnCFCancel">Huỷ</button>
-                <button class="btn-bottom-save" id="btnConfirm" >Đồng ý</button>
+                <button class="btn-bottom-save" id="btnConfirm">Đồng ý</button>
             </div>
         </div>
     </div>
