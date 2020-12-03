@@ -267,7 +267,7 @@ class BaseJS {
             dialogDetail.dialog('open');
             //load dữ liệu cho các combobox:
             var me = this;
-             var selects = $('select[fieldName]');
+            var selects = $('select[fieldName]');
         
              $.each(selects, function (index, select) {
                  //Lấy dữ liệu nhóm khách hàng

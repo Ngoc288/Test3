@@ -11,7 +11,7 @@ namespace MISA.ApplicationCore.Services
         IDepartmentRepository _departmentRepository;
         public DepartmentService(IBaseRepository<Department> departmentRepository) : base(departmentRepository)
         {
-            //_departmentRepository = departmentRepository;
+         /*   _departmentRepository = departmentRepository;*/
         }
 
     }

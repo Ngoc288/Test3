@@ -170,7 +170,7 @@ button, tr{
 
     .content .content-table {
         width: calc(100% - 48px);
-        height: 680px;
+        height: 674px;
         margin: 24px;
         overflow-x: auto;
         overflow-y: auto;
