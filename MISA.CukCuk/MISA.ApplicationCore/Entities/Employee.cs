@@ -23,7 +23,8 @@ namespace MISA.ApplicationCore.Entities
 
         public string GenderName
         {
-            get {
+            get
+            {
                 var name = string.Empty;
                 switch (Gender)
                 {
@@ -44,8 +45,8 @@ namespace MISA.ApplicationCore.Entities
         }
 
         public string Address { get; set; }
-        public string PositionName { get; set; }
-        public Guid PositionId { get; set; }
+        public string PossitionName { get; set; }
+        public Guid PossitionId { get; set; }
         public string DepartmentName { get; set; }
         public Guid DepartmentId { get; set; }
         public double? Salary { get; set; }

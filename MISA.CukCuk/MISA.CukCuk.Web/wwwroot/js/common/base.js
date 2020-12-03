@@ -43,21 +43,15 @@ class BaseJS {
         })
 
         //Chọn 1 bản ghi để thực hiện thao tác xóa
-        $('table tbody').on('click', 'tr', function (e) {
-            $(this).find('td').addClass('choosetr');
-            if (click == $('#btnDel')) {
-                me.deleteData(e);
-            }
-            
-
-         /*   $('#btnDel').click(function () {
-                dialogConfirm.dialog('open');
-                var idButtonSaveDelete = $(e.currentTarget).data('recordId');
-                $('#btnConfirm').attr('idItem', idButtonSaveDelete);
-            })*/
-          
+        $('table tbody').on('click', 'tr', function () {
+            $('tbody').children().removeClass('choosetr');
+            $(this).addClass('choosetr');
         })
+
         
+        $('#btnDel').click(function () {
+            dialogConfirm.dialog('open');
+        })
 
         //Ẩn form confirm
         $('#btnCFCancel').click(function () {
@@ -203,27 +197,17 @@ class BaseJS {
 
             //Lấy tất cả các control nhập liệu
 
-            var inputs = $('input[fieldName], select[fieldName]');
+            var inputs = $('.infor input, select');
             var entity = {};
             $.each(inputs, function (index, input) {
-                var propertyName = $(this).attr('fieldName');
-                var value = $(this).val();
-
-                //check với trường hợp input radio thì chỉ lấy value của input có checked
-               /* if ($(this).attr('type') == 'radio') {
-                    if (this.checked) {
-                        entity[propertyName] = value;
-                    }
+                var propertyName = $(input).attr('fieldName');
+                var propertySelect = $(input).attr('fieldValue');
+                var value = $(input).val();
+                if (propertySelect) {
+                    entity[propertySelect] = value;
                 } else {
                     entity[propertyName] = value;
-                }*/
-                //check với trường hợp combobox
-                if (this.tagName == "SELECT") {
-                    var propertyName = $(this).attr('fieldValue');
-                    entity[propertyName] = value;
-
                 }
-
             })
 
             var method = "POST";
@@ -231,7 +215,7 @@ class BaseJS {
                 method = "PUT";
                 entity.EmployeeId = me.recordId;
             }
-
+            console.log(entity);
 
             //gọi service tương ứng thực hiện lưu trữ dữ liệu
             $.ajax({
@@ -242,6 +226,7 @@ class BaseJS {
             }).done(function (res) {
                 //sau khi lưu thành công:
                 //+đưa ra thông báo, 
+                alert('Them thanh cong')
                 //+ẩn form chi tiết,
                 console.log(res);
                 dialogDetail.dialog('close');
@@ -344,8 +329,8 @@ class BaseJS {
         try {
             var me = this;
             me.FormMode = 'Delete';
-            var id = $(item.currentTarget).attr('iditem');
-
+            var id = $('.choosetr').data('recordId');
+            console.log(id);
              $.ajax({
                 url: me.host + me.apiRouter + `/${id}`,
                 method: 'DELETE',

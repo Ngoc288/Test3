@@ -9,13 +9,13 @@ namespace MISA.ApplicationCore.Interfaces
     /// Interface danh mục vị trí
     /// </summary>
     /// createdby ngochtb(01/12/2020)
-    public interface IPositionRepository: IBaseRepository<Position>
+    public interface IPossitionRepository: IBaseRepository<Possition>
     {
         /// <summary>
         /// Lấy danh sách vị trí theo mã vị trí
         /// </summary>
-        /// <param name="positionCode"></param>
+        /// <param name="PossitionCode"></param>
         /// <returns></returns>
-        //Position GetPositionByCode(string positionCode);
+        //Possition GetPossitionByCode(string PossitionCode);
     }
 }

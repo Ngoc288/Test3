@@ -10,7 +10,7 @@ using System.Data;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-
+using Z.Dapper.Plus;
 namespace MISA.Infarstructure
 {
     public class BaseRepository<TEntity> : IBaseRepository<TEntity>, IDisposable where TEntity : BaseEntity
@@ -31,24 +31,27 @@ namespace MISA.Infarstructure
         }
         public int Add(TEntity entity)
         {
-            var rowAffects = 0;
             _dbConnection.Open();
             using (var transaction = _dbConnection.BeginTransaction())
             {
-                try
-                {
-                    var parameters = MappingDbType(entity);
-                    // Thực hiện thêm khách hàng:
-                    rowAffects = _dbConnection.Execute($"Proc_Insert{_tableName}", parameters, commandType: CommandType.StoredProcedure);
-                    transaction.Commit();
-                }
-                catch (Exception ex)
-                {
-                    transaction.Rollback();
-                }
+                entity.GetType().GetProperty($"{_tableName}Id").SetValue(entity, Guid.NewGuid());
+                var rowAffects = _dbConnection.BulkInsert(entity);
+                //try
+                //{
+                //    var parameters = MappingDbType(entity);
+                //    // Thực hiện thêm khách hàng:
+                //    rowAffects = _dbConnection.Execute($"Proc_Insert{_tableName}", parameters, commandType: CommandType.StoredProcedure);
+                //    transaction.Commit();
+                //}
+                //catch (Exception ex)
+                //{
+                //    transaction.Rollback();
+                //}
+                transaction.Commit();
+                return rowAffects.Actions.Count();
             }
             // Trả về kết quả (số bản ghi thêm mới được)
-            return rowAffects;
+            
         }
 
         public int Delete(Guid employeeId)
@@ -68,19 +71,19 @@ namespace MISA.Infarstructure
         {
             // Kết nối tới CSDL:
             // Khởi tạo các commandText:
-            var entities = _dbConnection.Query<TEntity>($"SELECT * FROM {_tableName}", commandType: CommandType.Text);
+            var entities = _dbConnection.Query<TEntity>($"Proc_Get{_tableName}s", commandType: CommandType.StoredProcedure);
             // Trả về về dữ liệu:
             return entities;
         }
 
-        public virtual IEnumerable<TEntity> GetEntities(string storeName)
-        {
-            // Kết nối tới CSDL:
-            // Khởi tạo các commandText:
-            var entities = _dbConnection.Query<TEntity>($"{storeName}", commandType: CommandType.StoredProcedure);
-            // Trả về về dữ liệu:
-            return entities;
-        }
+        //public virtual IEnumerable<TEntity> GetEntities(string storeName)
+        //{
+        //    // Kết nối tới CSDL:
+        //    // Khởi tạo các commandText:
+        //    var entities = _dbConnection.Query<TEntity>($"{Proc_Get{_tableName}", commandType: CommandType.StoredProcedure);
+        //    // Trả về về dữ liệu:
+        //    return entities;
+        //}
 
         public TEntity GetEntityById(Guid entityId)
         {

@@ -7,19 +7,19 @@ using System.Text;
 
 namespace MISA.Infarstructure
 {
-    public class PositionRepository:BaseRepository<Position>, IPositionRepository
+    public class PossitionRepository:BaseRepository<Possition>, IPossitionRepository
     {
         #region DECLARE
         #endregion
 
-        public PositionRepository(IConfiguration configuration) : base(configuration)
+        public PossitionRepository(IConfiguration configuration) : base(configuration)
         {
 
         }
 
-        public override IEnumerable<Position> GetEntities()
-        {
-            return base.GetEntities("Proc_Positions");
-        }
+        //public override IEnumerable<Possition> GetEntities()
+        //{
+        //    return base.GetEntities("Proc_Possitions");
+        //}
     }
 }

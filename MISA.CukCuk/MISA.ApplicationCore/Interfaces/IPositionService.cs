@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MISA.ApplicationCore.Interfaces
 {
-    public interface IPositionService:IBaseService<Position>
+    public interface IPossitionService:IBaseService<Possition>
     {
     }
 }

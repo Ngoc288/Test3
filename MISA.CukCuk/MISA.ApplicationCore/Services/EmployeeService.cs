@@ -23,5 +23,12 @@ namespace MISA.ApplicationCore.Services
         {
             throw new NotImplementedException();
         }
+
+        public IEnumerable<Employee> GetEmployeesByPossition(Guid PossitionId)
+        {
+            throw new NotImplementedException();
+        }
+
+    
     }
 }

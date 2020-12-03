@@ -6,12 +6,12 @@ using System.Text;
 
 namespace MISA.ApplicationCore.Services
 {
-    public class PositionService : BaseService<Position>, IPositionService
+    public class PossitionService : BaseService<Possition>, IPossitionService
     {
-        IPositionRepository _positionRepository;
-        public PositionService(IPositionRepository positionRepository) : base(positionRepository)
+        IPossitionRepository _PossitionRepository;
+        public PossitionService(IPossitionRepository PossitionRepository) : base(PossitionRepository)
         {
-            _positionRepository = positionRepository;
+            _PossitionRepository = PossitionRepository;
         }
     }
 }

@@ -51,10 +51,10 @@ namespace MISA.CukCuk.Web
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<IEmployeeRepository, EmployeeRepository>();
-            services.AddScoped<IPositionRepository, PositionRepository>();
+            services.AddScoped<IPossitionRepository, PossitionRepository>();
             services.AddScoped<IDepartmentRepository, DepartmentRepository>();
             services.AddScoped<IEmployeeService, EmployeeService>();
-            services.AddScoped<IPositionService, PositionService>();
+            services.AddScoped<IPossitionService, PossitionService>();
             services.AddScoped<IDepartmentService, DepartmentService>();
         }
 

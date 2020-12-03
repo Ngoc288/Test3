@@ -18,10 +18,10 @@ namespace MISA.Infarstructure
         {
         }
 
-        public override IEnumerable<Department> GetEntities()
-        {
-            return base.GetEntities("Proc_Departments");
-        }
+        //public override IEnumerable<Department> GetEntities()
+        //{
+        //    return base.GetEntities("Proc_Departments");
+        //}
 
         public Department GetDepartmentById(string departmentId)
         {

@@ -20,10 +20,10 @@ namespace MISA.Infarstructure
         {
         }
 
-        public override IEnumerable<Employee> GetEntities()
-        {
-            return base.GetEntities("Proc_GetEmployees");   
-        }
+        //public override IEnumerable<Employee> GetEntities()
+        //{
+        //    return base.GetEntities("Proc_GetEmployees");   
+        //}
 
     }
 }

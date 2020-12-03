@@ -51,6 +51,8 @@ namespace MISA.ApplicationCore.Services
             return _baseRepository.GetEntityById(entityId);
         }
 
+
+
         public ServiceResult Update(TEntity entity)
         {
             entity.EntityState = Enums.EntityState.Update;

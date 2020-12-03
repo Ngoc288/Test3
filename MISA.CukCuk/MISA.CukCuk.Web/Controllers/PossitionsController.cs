@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 namespace MISA.CukCuk.Web.Controllers
 {
    
-    public class PositionsController : BaseEntityController<Position>
+    public class PossitionsController : BaseEntityController<Possition>
     {
-        IBaseService<Position> _baseService;
-        public PositionsController(IBaseService<Position> baseService) : base(baseService)
+        IBaseService<Possition> _baseService;
+        public PossitionsController(IBaseService<Possition> baseService) : base(baseService)
         {
             _baseService = baseService;
         }

@@ -12,7 +12,7 @@ namespace MISA.ApplicationCore.Interfaces
         /// </summary>
         /// <returns></returns>
         IEnumerable<TEntity> GetEntities();
-        IEnumerable<TEntity> GetEntities(string storeName);
+        //IEnumerable<TEntity> GetEntities(string storeName);
         TEntity GetEntityById(Guid employeeId);
         int Add(TEntity employee);
         int Update(TEntity employee);

@@ -495,10 +495,11 @@
           "lib/netstandard1.3/System.Collections.Concurrent.dll": {}
         }
       },
-      "System.Configuration.ConfigurationManager/4.4.1": {
+      "System.Configuration.ConfigurationManager/4.5.0": {
         "type": "package",
         "dependencies": {
-          "System.Security.Cryptography.ProtectedData": "4.4.0"
+          "System.Security.Cryptography.ProtectedData": "4.5.0",
+          "System.Security.Permissions": "4.5.0"
         },
         "compile": {
           "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
@@ -1329,7 +1330,7 @@
           "lib/netstandard1.3/System.Security.Cryptography.Primitives.dll": {}
         }
       },
-      "System.Security.Cryptography.ProtectedData/4.4.0": {
+      "System.Security.Cryptography.ProtectedData/4.5.0": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/_._": {}
@@ -1680,6 +1681,20 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
+      "Z.Dapper.Plus/3.0.26": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "Newtonsoft.Json": "11.0.2",
+          "System.Configuration.ConfigurationManager": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Z.Dapper.Plus.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Z.Dapper.Plus.dll": {}
+        }
+      },
       "MISA.ApplicationCore/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -1697,7 +1712,8 @@
           "Dapper": "2.0.78",
           "MISA.ApplicationCore": "1.0.0",
           "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
-          "MySql.Data": "8.0.22"
+          "MySql.Data": "8.0.22",
+          "Z.Dapper.Plus": "3.0.26"
         },
         "compile": {
           "bin/placeholder/MISA.Infarstructure.dll": {}
@@ -2678,10 +2694,10 @@
         "system.collections.concurrent.nuspec"
       ]
     },
-    "System.Configuration.ConfigurationManager/4.4.1": {
-      "sha512": "jz3TWKMAeuDEyrPCK5Jyt4bzQcmzUIMcY9Ud6PkElFxTfnsihV+9N/UCqvxe1z5gc7jMYAnj7V1COMS9QKIuHQ==",
+    "System.Configuration.ConfigurationManager/4.5.0": {
+      "sha512": "UIFvaFfuKhLr9u5tWMxmVoDPkFeD+Qv8gUuap4aZgVGYSYMdERck4OhLN/2gulAc0nYTEigWXSJNNWshrmxnng==",
       "type": "package",
-      "path": "system.configuration.configurationmanager/4.4.1",
+      "path": "system.configuration.configurationmanager/4.5.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2693,7 +2709,7 @@
         "ref/net461/System.Configuration.ConfigurationManager.xml",
         "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll",
         "ref/netstandard2.0/System.Configuration.ConfigurationManager.xml",
-        "system.configuration.configurationmanager.4.4.1.nupkg.sha512",
+        "system.configuration.configurationmanager.4.5.0.nupkg.sha512",
         "system.configuration.configurationmanager.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -5095,10 +5111,10 @@
         "system.security.cryptography.primitives.nuspec"
       ]
     },
-    "System.Security.Cryptography.ProtectedData/4.4.0": {
-      "sha512": "cJV7ScGW7EhatRsjehfvvYVBvtiSMKgN8bOVI0bQhnF5bU7vnHVIsH49Kva7i7GWaWYvmEzkYVk1TC+gZYBEog==",
+    "System.Security.Cryptography.ProtectedData/4.5.0": {
+      "sha512": "wLBKzFnDCxP12VL9ANydSYhk59fC4cvOr9ypYQLPnAj48NQIhqnjdD2yhP8yEKyBJEjERWS9DisKL7rX5eU25Q==",
       "type": "package",
-      "path": "system.security.cryptography.protecteddata/4.4.0",
+      "path": "system.security.cryptography.protecteddata/4.5.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5130,7 +5146,7 @@
         "runtimes/win/lib/net461/System.Security.Cryptography.ProtectedData.dll",
         "runtimes/win/lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
         "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
-        "system.security.cryptography.protecteddata.4.4.0.nupkg.sha512",
+        "system.security.cryptography.protecteddata.4.5.0.nupkg.sha512",
         "system.security.cryptography.protecteddata.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -6107,6 +6123,23 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
+    "Z.Dapper.Plus/3.0.26": {
+      "sha512": "Fw6bEgdKOVD9NqKFzTpyEJ9xA3STx11kksvFug2840bXWZlwfrb1r3zcqvTick1AhEBiO26yq5lXEzRhrvysSw==",
+      "type": "package",
+      "path": "z.dapper.plus/3.0.26",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Z.Dapper.Plus.dll",
+        "lib/net40/Z.Dapper.Plus.xml",
+        "lib/net45/Z.Dapper.Plus.dll",
+        "lib/net45/Z.Dapper.Plus.xml",
+        "lib/netstandard2.0/Z.Dapper.Plus.dll",
+        "lib/netstandard2.0/Z.Dapper.Plus.xml",
+        "z.dapper.plus.3.0.26.nupkg.sha512",
+        "z.dapper.plus.nuspec"
+      ]
+    },
     "MISA.ApplicationCore/1.0.0": {
       "type": "project",
       "path": "../MISA.ApplicationCore/MISA.ApplicationCore.csproj",
@@ -6131,19 +6164,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hbngoc\\.nuget\\packages\\": {}
+    "C:\\Users\\HBNgoc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hbngoc\\Documents\\Test3\\Test3\\MISA.CukCuk\\MISA.CukCuk.Web\\MISA.CukCuk.Web.csproj",
+      "projectUniqueName": "C:\\Users\\HBNgoc\\Documents\\Test3\\Test3\\MISA.CukCuk\\MISA.CukCuk.Web\\MISA.CukCuk.Web.csproj",
       "projectName": "MISA.CukCuk.Web",
-      "projectPath": "C:\\Users\\hbngoc\\Documents\\Test3\\Test3\\MISA.CukCuk\\MISA.CukCuk.Web\\MISA.CukCuk.Web.csproj",
-      "packagesPath": "C:\\Users\\hbngoc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hbngoc\\Documents\\Test3\\Test3\\MISA.CukCuk\\MISA.CukCuk.Web\\obj\\",
+      "projectPath": "C:\\Users\\HBNgoc\\Documents\\Test3\\Test3\\MISA.CukCuk\\MISA.CukCuk.Web\\MISA.CukCuk.Web.csproj",
+      "packagesPath": "C:\\Users\\HBNgoc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\HBNgoc\\Documents\\Test3\\Test3\\MISA.CukCuk\\MISA.CukCuk.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\hbngoc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HBNgoc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6156,11 +6189,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\hbngoc\\Documents\\Test3\\Test3\\MISA.CukCuk\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj": {
-              "projectPath": "C:\\Users\\hbngoc\\Documents\\Test3\\Test3\\MISA.CukCuk\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj"
+            "C:\\Users\\HBNgoc\\Documents\\Test3\\Test3\\MISA.CukCuk\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj": {
+              "projectPath": "C:\\Users\\HBNgoc\\Documents\\Test3\\Test3\\MISA.CukCuk\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj"
             },
-            "C:\\Users\\hbngoc\\Documents\\Test3\\Test3\\MISA.CukCuk\\MISA.Infarstructure\\MISA.Infarstructure.csproj": {
-              "projectPath": "C:\\Users\\hbngoc\\Documents\\Test3\\Test3\\MISA.CukCuk\\MISA.Infarstructure\\MISA.Infarstructure.csproj"
+            "C:\\Users\\HBNgoc\\Documents\\Test3\\Test3\\MISA.CukCuk\\MISA.Infarstructure\\MISA.Infarstructure.csproj": {
+              "projectPath": "C:\\Users\\HBNgoc\\Documents\\Test3\\Test3\\MISA.CukCuk\\MISA.Infarstructure\\MISA.Infarstructure.csproj"
             }
           }
         }
@@ -6217,7 +6250,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -44,5 +44,5 @@ C:\Users\hbngoc\Documents\Test3\Test3\MISA.CukCuk\MISA.Infarstructure\bin\Debug\
 C:\Users\hbngoc\Documents\Test3\Test3\MISA.CukCuk\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.Infarstructure.csprojAssemblyReference.cache
 C:\Users\hbngoc\Documents\Test3\Test3\MISA.CukCuk\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.Infarstructure.AssemblyInfoInputs.cache
 C:\Users\hbngoc\Documents\Test3\Test3\MISA.CukCuk\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.Infarstructure.AssemblyInfo.cs
-C:\Users\hbngoc\Documents\Test3\Test3\MISA.CukCuk\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.Infarstructure.csproj.CoreCompileInputs.cache
 C:\Users\hbngoc\Documents\Test3\Test3\MISA.CukCuk\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.Infarstructure.csproj.CopyComplete
+C:\Users\HBNgoc\Documents\Test3\Test3\MISA.CukCuk\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.Infarstructure.csproj.CoreCompileInputs.cache

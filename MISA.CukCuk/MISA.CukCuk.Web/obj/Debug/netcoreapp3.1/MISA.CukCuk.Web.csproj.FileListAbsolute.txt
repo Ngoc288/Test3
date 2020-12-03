@@ -206,3 +206,4 @@ C:\Users\hbngoc\Documents\Test3\Test3\MISA.CukCuk\MISA.CukCuk.Web\obj\Debug\netc
 C:\Users\hbngoc\Documents\Test3\Test3\MISA.CukCuk\MISA.CukCuk.Web\obj\Debug\netcoreapp3.1\staticwebassets\MISA.CukCuk.Web.StaticWebAssets.Manifest.cache
 C:\Users\hbngoc\Documents\Test3\Test3\MISA.CukCuk\MISA.CukCuk.Web\obj\Debug\netcoreapp3.1\staticwebassets\MISA.CukCuk.Web.StaticWebAssets.xml
 C:\Users\hbngoc\Documents\Test3\Test3\MISA.CukCuk\MISA.CukCuk.Web\obj\Debug\netcoreapp3.1\MISA.CukCuk.Web.genruntimeconfig.cache
+C:\Users\HBNgoc\Documents\Test3\Test3\MISA.CukCuk\MISA.CukCuk.Web\bin\Debug\netcoreapp3.1\Z.Dapper.Plus.dll
