@@ -63,6 +63,9 @@
     createdby ngochtb(13/11/2020)
 
 */
+.infor{
+    padding: 24px;
+}
 .infor .avatar-left {
     width: 25%;
     height: auto;

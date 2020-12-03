@@ -37,9 +37,18 @@ button, tr{
 .button-right-bottom{
     padding-top: 5px;
 }
-.choosetr {
-    background-color: #03c481;
+.btn-bottom-dialog {
+    width: 100%;
+    height: 60px;
+    background: #cccccc;
 }
+    .btn-bottom-dialog button {
+        float: right;
+        margin: 10px;
+    }
+    .choosetr {
+        background-color: #03c481;
+    }
 .text-align-right {
     text-align: right !important;
 }
