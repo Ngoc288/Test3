@@ -1,4 +1,5 @@
-﻿
+﻿//import { values } from "../../css/fontawesome-free-5.15.1-web/js/v4-shims";
+
 
 
 /**
@@ -182,7 +183,7 @@ class BaseJS {
         try {
             var me = this;
             //validate dữ liệu
-            var inputValidates = $('.input-required, #txtEmail');
+            var inputValidates = $('.input-required');
             $.each(inputValidates, function (index, input) {
                 $(input).trigger(`blur`);
             })
@@ -203,7 +204,14 @@ class BaseJS {
                 var propertyName = $(input).attr('fieldName');
                 var propertySelect = $(input).attr('fieldValue');
                 var value = $(input).val();
-                if (propertySelect) {
+                if (propertyName == 'Salary') {
+                    var result = '';
+                    value.replace(/\d+/gm, function (number) {                        
+                        result = result + number;                                               
+                    });
+                    entity[propertyName] = result;
+                }
+                else if (propertySelect) {
                     entity[propertySelect] = value;
                 } else {
                     entity[propertyName] = value;
@@ -211,22 +219,28 @@ class BaseJS {
             })
 
             var method = "POST";
+            var apiRouter = me.apiRouter;
             if (me.FormMode == 'Edit') {
                 method = "PUT";
                 entity.EmployeeId = me.recordId;
+                apiRouter = apiRouter + `/${me.recordId}`;
             }
             console.log(entity);
 
             //gọi service tương ứng thực hiện lưu trữ dữ liệu
             $.ajax({
-                url: me.host + me.apiRouter,
+                url: me.host + apiRouter,
                 method: method,
                 data: JSON.stringify(entity),
                 contentType: 'application/json'
             }).done(function (res) {
+ 
                 //sau khi lưu thành công:
                 //+đưa ra thông báo, 
-                alert('Them thanh cong')
+                if (method == "POST")
+                    alert("làm thông báo đi nhá em");
+                else
+                    alert('Sua thanh cong');
                 //+ẩn form chi tiết,
                 console.log(res);
                 dialogDetail.dialog('close');
@@ -234,6 +248,10 @@ class BaseJS {
                 me.loadData();
 
             }).fail(function (res) {
+                if (method == "POST")
+                    alert(res.responseJSON.Messenger);
+                else
+                    alert('Sua that bai');
                 console.log(res);
             })
         }
@@ -313,7 +331,7 @@ class BaseJS {
 
                 })
             }).fail(function (res) {
-         
+                console.log(res);
             })
         } catch (e) {
             console.log(e);
@@ -345,4 +363,5 @@ class BaseJS {
         }
         dialogConfirm.dialog('close');
     }
+
 }

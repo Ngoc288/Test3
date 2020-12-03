@@ -79,24 +79,24 @@ namespace MISA.ApplicationCore.Enums
         /// Đã nghỉ việc
         /// </summary>
         /// createdby ngochtb(01/12/2020)
-        Resign=1,
+        Resign=0,
 
         /// <summary>
         /// Đang làm việc
         /// </summary>
         /// createdby ngochtb(01/12/2020)
-        Working=2,
+        Working=1,
 
         /// <summary>
         /// Đang thử việc
         /// </summary>
         /// createdby ngochtb(01/12/2020)
-        TrailWork=3,
+        TrailWork=2,
 
         /// <summary>
         /// Đã nghỉ hưu
         /// </summary>
         /// createdby ngochtb(01/12/2020)
-        Retired=4
+        Retired=3
     }
 }

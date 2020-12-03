@@ -70,10 +70,11 @@ namespace MISA.ApplicationCore.Services
         }
 
         /// <summary>
-        /// 
+        /// Validate dữ liệu
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>
+        /// createdby ngochtb(02/12/2020)
         private bool Validate(TEntity entity)
         {
             var mesArrayErro = new List<string>();
@@ -93,7 +94,7 @@ namespace MISA.ApplicationCore.Services
                 // Kiểm tra xem có attribute cần phải validate không:
                 if (property.IsDefined(typeof(Required), false))
                 {
-                    // Check bắt buộc nhập:ư
+                    // Check bắt buộc nhập:
                     if (propertyValue == null)
                     {
                         isValidate = false;
@@ -129,7 +130,7 @@ namespace MISA.ApplicationCore.Services
                         isValidate = false;
                         mesArrayErro.Add(msg??$"Thông tin này vượt quá {length} ký tự cho phép.");
                         _serviceResult.MISACode = Enums.MISACode.NotValid;
-                        _serviceResult.Messenger = "Dữ liệu không hợp lệ";
+                        _serviceResult.Messenger = Properties.Resources.Msg_IsNotValid;
                     }
 
 

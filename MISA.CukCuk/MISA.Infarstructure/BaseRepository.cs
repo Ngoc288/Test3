@@ -29,6 +29,12 @@ namespace MISA.Infarstructure
             _dbConnection = new MySqlConnection(_connectionString);
             _tableName = typeof(TEntity).Name;
         }
+        /// <summary>
+        /// Thực hiện thêm 
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        /// createdby ngochtb(02/12/2020)
         public int Add(TEntity entity)
         {
             _dbConnection.Open();
@@ -53,6 +59,12 @@ namespace MISA.Infarstructure
             // Trả về kết quả (số bản ghi thêm mới được)
             
         }
+        /// <summary>
+        /// Thực hiện xóa
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <returns></returns>
+        /// createdby ngochtb(02/12/2020)
 
         public int Delete(Guid employeeId)
         {
@@ -76,14 +88,12 @@ namespace MISA.Infarstructure
             return entities;
         }
 
-        //public virtual IEnumerable<TEntity> GetEntities(string storeName)
-        //{
-        //    // Kết nối tới CSDL:
-        //    // Khởi tạo các commandText:
-        //    var entities = _dbConnection.Query<TEntity>($"{Proc_Get{_tableName}", commandType: CommandType.StoredProcedure);
-        //    // Trả về về dữ liệu:
-        //    return entities;
-        //}
+        /// <summary>
+        /// Lấy dữ liệu theo Id
+        /// </summary>
+        /// <param name="entityId"></param>
+        /// <returns></returns>
+        /// createdby ngochtb(02/12/2020)
 
         public TEntity GetEntityById(Guid entityId)
         {
@@ -95,15 +105,21 @@ namespace MISA.Infarstructure
             // Trả về kết quả (số bản ghi thêm mới được)
             return rowAffects;
         }
-    
 
+        /// <summary>
+        /// Cập nhật bản ghi
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns>số bản ghi</returns>
+        /// createdby ngochtb(02/12/2020)
         public int Update(TEntity entity)
         {
-            // Khởi tạo kết nối với Db:
-            var parameters = MappingDbType(entity);
-            // Thực thi commandText:
-            var rowAffects = _dbConnection.Execute($"Proc_Update{_tableName}", parameters, commandType: CommandType.StoredProcedure);
-            // Trả về kết quả (số bản ghi thêm mới được)
+            //// Khởi tạo kết nối với Db:
+            //var parameters = MappingDbType(entity);
+            //// Thực thi commandText:
+            //var rowAffects = _dbConnection.Execute($"Proc_Update{_tableName}", parameters, commandType: CommandType.StoredProcedure);
+            //// Trả về kết quả (số bản ghi thêm mới được)
+            var rowAffects = _dbConnection.BulkUpdate(entity).Actions.Count();
             return rowAffects;
         }
 
@@ -139,7 +155,13 @@ namespace MISA.Infarstructure
             }
             return parameters;
         }
-
+        /// <summary>
+        /// Lấy dữ liệu theo thuộc tính
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <param name="property"></param>
+        /// <returns></returns>
+        /// createdby ngochtb(02/12/2020)
         public TEntity GetEntityByProperty(TEntity entity, PropertyInfo property)
         {
             var propertyName = property.Name;

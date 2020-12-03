@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    new CustomerJS();
+    new EmployeeJS();
     $(function () {
         dialogDetail = $("#dialog-form").dialog({
             autoOpen: false,
@@ -17,7 +17,7 @@
             width: 400,
             modal: true,
         });
-       
+
     })
 })
 
@@ -25,7 +25,7 @@
  * Class quản lý các sự kiện cho trang Customer
  * created by ngochtb(13/11/2020)*/
 
-    class CustomerJS extends BaseJS {
+class EmployeeJS extends BaseJS {
         constructor() {
             super();
         }

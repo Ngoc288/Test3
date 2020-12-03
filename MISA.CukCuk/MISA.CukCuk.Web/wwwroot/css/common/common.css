@@ -37,8 +37,3 @@ input:checked ~ .checkmark {
         transform: rotate(360deg);
     }
 }
- .text-noti{
-        font-size: 25px;
-        font-weight: bold
-    }
-   

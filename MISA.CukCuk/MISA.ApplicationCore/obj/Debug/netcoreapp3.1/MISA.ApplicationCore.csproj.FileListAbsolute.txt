@@ -42,3 +42,14 @@ C:\Users\hbngoc\Documents\Test3\Test3\MISA.CukCuk\MISA.ApplicationCore\obj\Debug
 C:\Users\hbngoc\Documents\Test3\Test3\MISA.CukCuk\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.ApplicationCore.csproj.CoreCompileInputs.cache
 C:\Users\hbngoc\Documents\Test3\Test3\MISA.CukCuk\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.ApplicationCore.dll
 C:\Users\hbngoc\Documents\Test3\Test3\MISA.CukCuk\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.ApplicationCore.pdb
+D:\MISAFRESHER\misa training\Test 4\Test3\MISA.CukCuk\MISA.ApplicationCore\bin\Debug\netcoreapp3.1\MISA.ApplicationCore.deps.json
+D:\MISAFRESHER\misa training\Test 4\Test3\MISA.CukCuk\MISA.ApplicationCore\bin\Debug\netcoreapp3.1\MISA.ApplicationCore.dll
+D:\MISAFRESHER\misa training\Test 4\Test3\MISA.CukCuk\MISA.ApplicationCore\bin\Debug\netcoreapp3.1\MISA.ApplicationCore.pdb
+D:\MISAFRESHER\misa training\Test 4\Test3\MISA.CukCuk\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.ApplicationCore.csprojAssemblyReference.cache
+D:\MISAFRESHER\misa training\Test 4\Test3\MISA.CukCuk\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.ApplicationCore.Properties.Resources.resources
+D:\MISAFRESHER\misa training\Test 4\Test3\MISA.CukCuk\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.ApplicationCore.csproj.GenerateResource.cache
+D:\MISAFRESHER\misa training\Test 4\Test3\MISA.CukCuk\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.ApplicationCore.AssemblyInfoInputs.cache
+D:\MISAFRESHER\misa training\Test 4\Test3\MISA.CukCuk\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.ApplicationCore.AssemblyInfo.cs
+D:\MISAFRESHER\misa training\Test 4\Test3\MISA.CukCuk\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.ApplicationCore.csproj.CoreCompileInputs.cache
+D:\MISAFRESHER\misa training\Test 4\Test3\MISA.CukCuk\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.ApplicationCore.dll
+D:\MISAFRESHER\misa training\Test 4\Test3\MISA.CukCuk\MISA.ApplicationCore\obj\Debug\netcoreapp3.1\MISA.ApplicationCore.pdb

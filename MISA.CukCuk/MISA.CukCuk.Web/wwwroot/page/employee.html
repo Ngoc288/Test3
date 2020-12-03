@@ -147,7 +147,7 @@
                     <div class="paging-record-info">
                         Hiển thị <b>1-10/1000</b> Khách hàng
                     </div>
-                    <div class="paging-option">
+                    <!--<div class="paging-option">
                         <div class="btn-select-page m-btn-firstpage"></div>
                         <div class="btn-select-page m-btn-prev-page"></div>
                         <div class="m-btn-list-page">
@@ -158,7 +158,7 @@
                         </div>
                         <div class="btn-select-page m-btn-next-page"></div>
                         <div class="btn-select-page m-btn-lastpage"></div>
-                    </div>
+                    </div>-->
                     <div class="paging-record-option">
                         <b>10</b> Khách hàng/trang
                     </div>
@@ -259,11 +259,10 @@
                         <div class="item item-birth">
                             <p>Tình trạng công việc</p>
                             <select fieldName="WorkStatusName" fieldValue="WorkStatus" class="style-input style-select">
-                                <option value="0">Không xác định</option>
-                                <option value="1">Đã nghỉ việc</option>
-                                <option value="2">Đang làm việc</option>
-                                <option value="3">Đang thử việc</option>
-                                <option value="4">Đã nghỉ hưu</option>
+                                <option value="0">Đã nghỉ việc</option>
+                                <option value="1">Đang làm việc</option>
+                                <option value="2">Đang thử việc</option>
+                                <option value="3">Đã nghỉ hưu</option>
                             </select>
                         </div>
                     </div>
@@ -279,9 +278,9 @@
         </div>
     </div>
     <!--    Dialog thông báo xác nhận xoá-->
-    <div class="noti" id="dialog-confirm">
+    <div class="noti" id="dialog-confirm" title="Thông báo">
         <div class="text-noti">
-            Bạn có chắc muốn xoá không?
+            <i class="fas fa-exclamation-triangle icon-danger"></i>   Bạn có chắc chắn muốn xoá không?
         </div>
         <div class="btn-bottom">
             <div class="group-footer-button">
@@ -289,6 +288,10 @@
                 <button class="btn-bottom-save" id="btnConfirm">Đồng ý</button>
             </div>
         </div>
+    </div>
+    
+    <div class="alert-noti">
+
     </div>
 
 

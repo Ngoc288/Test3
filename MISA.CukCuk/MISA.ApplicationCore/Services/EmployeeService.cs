@@ -8,12 +8,14 @@ namespace MISA.ApplicationCore.Services
 {
     public class EmployeeService : BaseService<Employee>, IEmployeeService
     {
+
         IEmployeeRepository _employeeRepository;
+        #region Constructor
         public EmployeeService(IEmployeeRepository employeeRepository):base(employeeRepository)
         {
             _employeeRepository = employeeRepository;
         }
-
+        #endregion
         public IEnumerable<Employee> GetEmployeesByDepartment(Guid departmentId)
         {
             throw new NotImplementedException();

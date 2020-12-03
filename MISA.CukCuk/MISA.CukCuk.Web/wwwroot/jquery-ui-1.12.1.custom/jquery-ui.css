@@ -592,6 +592,8 @@ button.ui-button::-moz-focus-inner {
 	width: 90%;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	font-size: 15px;
+	font-weight: bold;
 }
 .ui-dialog .ui-dialog-titlebar-close {
 	position: absolute;
@@ -600,14 +602,13 @@ button.ui-button::-moz-focus-inner {
 	width: 30px;
 	margin: -10px 0 0 0;
 	padding: 1px;
-	height: 20px;
+	height: 30px;
 	border: none;
 	background: #ffffff;
 }
 .ui-dialog .ui-dialog-content {
 	position: relative;
 	border: 0;
-	padding: .5em 1em;
 	background: none;
 	overflow: auto;
 }
@@ -955,7 +956,6 @@ a:visited.ui-button,
 .ui-widget-header .ui-state-focus,
 .ui-button:hover,
 .ui-button:focus {
-	border: 1px solid #cccccc;
 	background: #ededed;
 	font-weight: normal;
 	color: #2b2b2b;
@@ -983,10 +983,8 @@ a.ui-button:focus {
 a.ui-button:active,
 .ui-button:active,
 .ui-button.ui-state-active:hover {
-	border: 1px solid #003eff;
-	background: #007fff;
 	font-weight: normal;
-	color: #ffffff;
+
 }
 .ui-icon-background,
 .ui-state-active .ui-icon-background {
@@ -1093,6 +1091,7 @@ a.ui-button:active,
 }
 .ui-button .ui-icon {
 	background-image: url("images/ui-icons_777777_256x240.png");
+	
 }
 
 /* positioning */
