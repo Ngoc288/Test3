@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HBNgoc\\Documents\\Test\\Test3\\MISA.CukCuk\\MISA.CukCuk.Web\\MISA.CukCuk.Web.csproj": {}
+    "C:\\Users\\hbngoc\\Documents\\test\\Test3\\MISA.CukCuk\\MISA.CukCuk.Web\\MISA.CukCuk.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HBNgoc\\Documents\\Test\\Test3\\MISA.CukCuk\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj": {
+    "C:\\Users\\hbngoc\\Documents\\test\\Test3\\MISA.CukCuk\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HBNgoc\\Documents\\Test\\Test3\\MISA.CukCuk\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj",
+        "projectUniqueName": "C:\\Users\\hbngoc\\Documents\\test\\Test3\\MISA.CukCuk\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj",
         "projectName": "MISA.ApplicationCore",
-        "projectPath": "C:\\Users\\HBNgoc\\Documents\\Test\\Test3\\MISA.CukCuk\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj",
-        "packagesPath": "C:\\Users\\HBNgoc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HBNgoc\\Documents\\Test\\Test3\\MISA.CukCuk\\MISA.ApplicationCore\\obj\\",
+        "projectPath": "C:\\Users\\hbngoc\\Documents\\test\\Test3\\MISA.CukCuk\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj",
+        "packagesPath": "C:\\Users\\hbngoc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hbngoc\\Documents\\test\\Test3\\MISA.CukCuk\\MISA.ApplicationCore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HBNgoc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hbngoc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -56,17 +56,17 @@
         }
       }
     },
-    "C:\\Users\\HBNgoc\\Documents\\Test\\Test3\\MISA.CukCuk\\MISA.CukCuk.Web\\MISA.CukCuk.Web.csproj": {
+    "C:\\Users\\hbngoc\\Documents\\test\\Test3\\MISA.CukCuk\\MISA.CukCuk.Web\\MISA.CukCuk.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HBNgoc\\Documents\\Test\\Test3\\MISA.CukCuk\\MISA.CukCuk.Web\\MISA.CukCuk.Web.csproj",
+        "projectUniqueName": "C:\\Users\\hbngoc\\Documents\\test\\Test3\\MISA.CukCuk\\MISA.CukCuk.Web\\MISA.CukCuk.Web.csproj",
         "projectName": "MISA.CukCuk.Web",
-        "projectPath": "C:\\Users\\HBNgoc\\Documents\\Test\\Test3\\MISA.CukCuk\\MISA.CukCuk.Web\\MISA.CukCuk.Web.csproj",
-        "packagesPath": "C:\\Users\\HBNgoc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HBNgoc\\Documents\\Test\\Test3\\MISA.CukCuk\\MISA.CukCuk.Web\\obj\\",
+        "projectPath": "C:\\Users\\hbngoc\\Documents\\test\\Test3\\MISA.CukCuk\\MISA.CukCuk.Web\\MISA.CukCuk.Web.csproj",
+        "packagesPath": "C:\\Users\\hbngoc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hbngoc\\Documents\\test\\Test3\\MISA.CukCuk\\MISA.CukCuk.Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HBNgoc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hbngoc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -79,11 +79,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\HBNgoc\\Documents\\Test\\Test3\\MISA.CukCuk\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj": {
-                "projectPath": "C:\\Users\\HBNgoc\\Documents\\Test\\Test3\\MISA.CukCuk\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj"
+              "C:\\Users\\hbngoc\\Documents\\test\\Test3\\MISA.CukCuk\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj": {
+                "projectPath": "C:\\Users\\hbngoc\\Documents\\test\\Test3\\MISA.CukCuk\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj"
               },
-              "C:\\Users\\HBNgoc\\Documents\\Test\\Test3\\MISA.CukCuk\\MISA.Infarstructure\\MISA.Infarstructure.csproj": {
-                "projectPath": "C:\\Users\\HBNgoc\\Documents\\Test\\Test3\\MISA.CukCuk\\MISA.Infarstructure\\MISA.Infarstructure.csproj"
+              "C:\\Users\\hbngoc\\Documents\\test\\Test3\\MISA.CukCuk\\MISA.Infarstructure\\MISA.Infarstructure.csproj": {
+                "projectPath": "C:\\Users\\hbngoc\\Documents\\test\\Test3\\MISA.CukCuk\\MISA.Infarstructure\\MISA.Infarstructure.csproj"
               }
             }
           }
@@ -144,17 +144,17 @@
         }
       }
     },
-    "C:\\Users\\HBNgoc\\Documents\\Test\\Test3\\MISA.CukCuk\\MISA.Infarstructure\\MISA.Infarstructure.csproj": {
+    "C:\\Users\\hbngoc\\Documents\\test\\Test3\\MISA.CukCuk\\MISA.Infarstructure\\MISA.Infarstructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HBNgoc\\Documents\\Test\\Test3\\MISA.CukCuk\\MISA.Infarstructure\\MISA.Infarstructure.csproj",
+        "projectUniqueName": "C:\\Users\\hbngoc\\Documents\\test\\Test3\\MISA.CukCuk\\MISA.Infarstructure\\MISA.Infarstructure.csproj",
         "projectName": "MISA.Infarstructure",
-        "projectPath": "C:\\Users\\HBNgoc\\Documents\\Test\\Test3\\MISA.CukCuk\\MISA.Infarstructure\\MISA.Infarstructure.csproj",
-        "packagesPath": "C:\\Users\\HBNgoc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HBNgoc\\Documents\\Test\\Test3\\MISA.CukCuk\\MISA.Infarstructure\\obj\\",
+        "projectPath": "C:\\Users\\hbngoc\\Documents\\test\\Test3\\MISA.CukCuk\\MISA.Infarstructure\\MISA.Infarstructure.csproj",
+        "packagesPath": "C:\\Users\\hbngoc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hbngoc\\Documents\\test\\Test3\\MISA.CukCuk\\MISA.Infarstructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HBNgoc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hbngoc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -167,8 +167,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\HBNgoc\\Documents\\Test\\Test3\\MISA.CukCuk\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj": {
-                "projectPath": "C:\\Users\\HBNgoc\\Documents\\Test\\Test3\\MISA.CukCuk\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj"
+              "C:\\Users\\hbngoc\\Documents\\test\\Test3\\MISA.CukCuk\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj": {
+                "projectPath": "C:\\Users\\hbngoc\\Documents\\test\\Test3\\MISA.CukCuk\\MISA.ApplicationCore\\MISA.ApplicationCore.csproj"
               }
             }
           }

@@ -592,13 +592,13 @@ button.ui-button::-moz-focus-inner {
 	width: 90%;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	font-size: 15px;
+	font-size: 20px;
 	font-weight: bold;
 }
 .ui-dialog .ui-dialog-titlebar-close {
 	position: absolute;
 	right: .3em;
-	top: 50%;
+	top: 25%;
 	width: 30px;
 	margin: -10px 0 0 0;
 	padding: 1px;
