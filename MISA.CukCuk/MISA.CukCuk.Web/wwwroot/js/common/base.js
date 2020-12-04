@@ -9,6 +9,7 @@ class BaseJS {
     constructor() {
         this.host = "http://localhost:51014";
         this.apiRouter = null;
+        this.buildSelect();
         this.setApiRouter();
         this.initEvent();
         this.loadData();
@@ -49,9 +50,16 @@ class BaseJS {
             $(this).addClass('choosetr');
         })
 
-        
+       //Click button xóa hiển thị dialog confirm
         $('#btnDel').click(function () {
+          
             dialogConfirm.dialog('open');
+          /*  $('#form-noti-failed').show();*/
+        })
+        //Đóng thông báo thêm/sửa/xóa/ thành công hoặc thất bại
+        $('#btnCloseNoti').click(function () {
+            $('#form-noti-failed').hide();
+            $('#form-noti-success').hide();
         })
 
         //Ẩn form confirm
@@ -78,6 +86,7 @@ class BaseJS {
 
         try {
             var me = this;
+            //Ẩn form thông báo
             $('table tbody').empty();
             //Lấy thông tin cột dữ liệu
             var columns = $('table thead tr th');
@@ -86,7 +95,10 @@ class BaseJS {
                 method: "GET",
                 async: true,
             }).done(function (res) {
+                var countRecord = res.length;
+                $('.paging-record-info b').html(`Hiển thị 1-${countRecord}/${countRecord}`);
                 $.each(res, function (index, obj) {
+                     
                     var tr = $(`<tr></tr>`);
                     $(tr).data('recordId', obj.EmployeeId);
                     //Lấy thông tin dữ liệu sẽ map tương ứng với các cột
@@ -138,32 +150,8 @@ class BaseJS {
 
             //Lấy dữ liệu cho các cbbox
             //var select = $('select #cbxDepartment');
+            me.buildSelect();
             
-            var selects = $('.build-select');
-            selects.empty();
-            $.each(selects, function (index, select) {
-                var _url = $(select).attr("api");
-                var fieldValue = $(select).attr("fieldValue");
-                var fieldName = $(select).attr("fieldName")
-                $.ajax({
-                    url: me.host + _url,
-                    method: "GET",
-
-                }).done(function (res) {
-                    if (res) {
-                        $.each(res, function (index, obj) {
-
-                            var option = $(`<option value="${obj[fieldValue]}">${obj[fieldName]}</option>`);
-                            $(select).append(option);
-
-                        })
-                    }
-                    $('.loading').hide();
-                }).fail(function (res) {
-                    debugger;
-                    $('.loading').hide();
-                })
-            })
             
             //Lấy dữ liệu trong nhóm phòng ban
             $('.loading').show();
@@ -174,6 +162,34 @@ class BaseJS {
 
     }
 
+    buildSelect() {
+        var me = this;
+        var selects = $('.build-select');
+        selects.empty();
+        $.each(selects, function (index, select) {
+            var _url = $(select).attr("api");
+            var fieldValue = $(select).attr("fieldValue");
+            var fieldName = $(select).attr("fieldName")
+            $.ajax({
+                url: me.host + _url,
+                method: "GET",
+
+            }).done(function (res) {
+                if (res) {
+                    $.each(res, function (index, obj) {
+
+                        var option = $(`<option value="${obj[fieldValue]}">${obj[fieldName]}</option>`);
+                        $(select).append(option);
+
+                    })
+                }
+                $('.loading').hide();
+            }).fail(function (res) {
+                debugger;
+                $('.loading').hide();
+            })
+        })
+    }
     /**
      * Hàm xử lý khi nhấn button lưu
      * createdby ngochtb(20/11/2020)
@@ -189,7 +205,7 @@ class BaseJS {
             })
             var notInput = $('input[validate=false]');
             if (notInput && notInput.length > 0) {
-                alert("Dữ liệu không hợp lệ vui lòng kiểm tra lại!");
+                this.snackError("Dữ liệu không hợp lệ vui lòng kiểm tra lại")
                 notInput[0].focus();
                 return;
             }
@@ -235,23 +251,33 @@ class BaseJS {
                 contentType: 'application/json'
             }).done(function (res) {
  
-                //sau khi lưu thành công:
-                //+đưa ra thông báo, 
-                if (method == "POST")
-                    alert("làm thông báo đi nhá em");
-                else
-                    alert('Sua thanh cong');
+                
+                
                 //+ẩn form chi tiết,
                 console.log(res);
                 dialogDetail.dialog('close');
+
+                //sau khi lưu thành công:
+                //+đưa ra thông báo, 
+                if (method == "POST") {
+                    me.snackSuccess("Thêm thành công!")
+                }
+
+                else {
+                    me.snackSuccess("Sửa thành công!")
+                }
                 //+load lại dữ liệu
                 me.loadData();
 
             }).fail(function (res) {
-                if (method == "POST")
-                    alert(res.responseJSON.Messenger);
+                if (method == "POST") {
+                    me.snackError("Thêm thất bại!")
+                }
+                    
                 else
-                    alert('Sua that bai');
+                {
+                    me.snackError("Sửa thất bại!")
+                }
                 console.log(res);
             })
         }
@@ -353,15 +379,36 @@ class BaseJS {
                 url: me.host + me.apiRouter + `/${id}`,
                 method: 'DELETE',
              }).done(function (res) {
+                 me.snackSuccess("Xóa thành công!")
                  me.loadData();
             }).fail(function (res) {
-             
+                me.snackError("Xóa thất bại!")
             })
              
         } catch (e) {
             console.log(e);
         }
+           
         dialogConfirm.dialog('close');
     }
 
+    //SetTimeout cho thông báo thất bại
+    snackError(mesenger) {
+        var mes = $("#form-noti-failed")
+        $("#form-noti-failed span").html(mesenger);
+        mes.addClass("show-snackbar");
+        setTimeout(function () {
+            mes.removeClass("show-snackbar");
+        }, 3000);
+    }
+
+    //SetTimeout cho thông báo thành công
+    snackSuccess(mesenger) {
+        var mes = $("#form-noti-success")
+        $("#form-noti-success span").html(mesenger);
+        mes.addClass("show-snackbar");
+        setTimeout(function () {
+            mes.removeClass("show-snackbar");
+        }, 3000);
+    }
 }

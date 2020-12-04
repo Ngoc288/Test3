@@ -58,3 +58,15 @@ D:\MISAFRESHER\misa training\Test 4\Test3\MISA.CukCuk\MISA.Infarstructure\obj\De
 D:\MISAFRESHER\misa training\Test 4\Test3\MISA.CukCuk\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.Infarstructure.csproj.CopyComplete
 D:\MISAFRESHER\misa training\Test 4\Test3\MISA.CukCuk\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.Infarstructure.dll
 D:\MISAFRESHER\misa training\Test 4\Test3\MISA.CukCuk\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.Infarstructure.pdb
+C:\Users\HBNgoc\Documents\Test\Test3\MISA.CukCuk\MISA.Infarstructure\bin\Debug\netcoreapp3.1\MISA.Infarstructure.deps.json
+C:\Users\HBNgoc\Documents\Test\Test3\MISA.CukCuk\MISA.Infarstructure\bin\Debug\netcoreapp3.1\MISA.Infarstructure.dll
+C:\Users\HBNgoc\Documents\Test\Test3\MISA.CukCuk\MISA.Infarstructure\bin\Debug\netcoreapp3.1\MISA.Infarstructure.pdb
+C:\Users\HBNgoc\Documents\Test\Test3\MISA.CukCuk\MISA.Infarstructure\bin\Debug\netcoreapp3.1\MISA.ApplicationCore.dll
+C:\Users\HBNgoc\Documents\Test\Test3\MISA.CukCuk\MISA.Infarstructure\bin\Debug\netcoreapp3.1\MISA.ApplicationCore.pdb
+C:\Users\HBNgoc\Documents\Test\Test3\MISA.CukCuk\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.Infarstructure.csprojAssemblyReference.cache
+C:\Users\HBNgoc\Documents\Test\Test3\MISA.CukCuk\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.Infarstructure.AssemblyInfoInputs.cache
+C:\Users\HBNgoc\Documents\Test\Test3\MISA.CukCuk\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.Infarstructure.AssemblyInfo.cs
+C:\Users\HBNgoc\Documents\Test\Test3\MISA.CukCuk\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.Infarstructure.csproj.CoreCompileInputs.cache
+C:\Users\HBNgoc\Documents\Test\Test3\MISA.CukCuk\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.Infarstructure.csproj.CopyComplete
+C:\Users\HBNgoc\Documents\Test\Test3\MISA.CukCuk\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.Infarstructure.dll
+C:\Users\HBNgoc\Documents\Test\Test3\MISA.CukCuk\MISA.Infarstructure\obj\Debug\netcoreapp3.1\MISA.Infarstructure.pdb

@@ -31,6 +31,9 @@ namespace MISA.ApplicationCore.Services
             throw new NotImplementedException();
         }
 
-    
+        public IEnumerable<Employee> GetEntityFilter(string specs, Guid? DepartmentId, Guid? PossitionId)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

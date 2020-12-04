@@ -20,6 +20,16 @@ namespace MISA.Infarstructure
         {
         }
 
+        public IEnumerable<Employee> GetEntityFilter(string specs, Guid? DepartmentId, Guid? PossitionId)
+        {
+            var parameter = new DynamicParameters();
+            parameter.Add("PropertyValue", specs, DbType.String);
+            parameter.Add("DepartmentID", DepartmentId, DbType.String);
+            parameter.Add("PossitionID", PossitionId, DbType.String);
+            var data = _dbConnection.Query<Employee>("Proc_GetEmployeesFilter", commandType: CommandType.StoredProcedure).ToList();
+            return data;
+        }
+
         //public override IEnumerable<Employee> GetEntities()
         //{
         //    return base.GetEntities("Proc_GetEmployees");   

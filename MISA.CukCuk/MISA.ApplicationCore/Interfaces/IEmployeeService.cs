@@ -22,5 +22,13 @@ namespace MISA.ApplicationCore.Interfaces
         /// createdby ngochtb(01/12/2020)
         IEnumerable<Employee> GetEmployeesByPosition(Guid positionId);
 
+        /// <summary>
+        /// hàm lọc theo các trường
+        /// </summary>
+        /// <param name="specs">Họ tên , số điện thoại, mã</param>
+        /// <param name="DepartmentId">mã phòng ban</param>
+        /// <param name="PossitionId">mã vị chí chức vụ</param>
+        /// <returns></returns>
+        IEnumerable<Employee> GetEntityFilter(string specs, Guid? DepartmentId, Guid? PossitionId);
     }
 }

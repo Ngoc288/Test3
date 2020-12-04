@@ -30,12 +30,14 @@
     src: url('../../content/font/Google Sans/GoogleSans-Medium.otf') format('opentype');
 }
 body {
-    font-family:GoogleSans-Regular;
-    font-size:13px;
+    font-family: GoogleSans-Regular;
+    font-size: 13px;
     margin: 0;
+
 }
-.main{
-    display:flex;
+.main {
+    display: flex;
+    position: relative;
 }
 .layout-left{
     width:220px;

@@ -49,7 +49,7 @@
                         <div class="menu-icon">
                             <i class="far fa-copy"></i>
                         </div>
-                        <div class="menu-text">Danh mục khách hàng</div>
+                        <div class="menu-text">Danh mục nhân viên</div>
 
                     </div>
                 </a>
@@ -76,7 +76,7 @@
             </div>
             <div class="content">
                 <div class="action">
-                    <span>Quản lý khách hàng</span>
+                    <span>Quản lý nhân viên</span>
                     <div class="button">
                         <!-- Button thêm mới-->
                         <div class="button-right button-add">
@@ -92,7 +92,7 @@
                             <button id="btnDel" class="button-del button-ref"><i class="fas fa-trash"></i></button>
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="search">
                     <div class="input-search">
@@ -100,21 +100,11 @@
                         <input placeholder="Tìm kiếm theo mã nhân viên, họ tên" type="text" class="style-input" />
                     </div>
                     <div class="choose-department">
-                        <select id="cbxCustomerGroup" fieldValue="CustomerGroupId" api="/api/customergroups" class="style-input style-select">
-                            <option>Tất cả phòng ban</option>
-                            <option>Khách VIP</option>
-                            <option>Khách thường</option>
-                            <option>Khách vãng lai</option>
-                        </select>
+                        <select id="cbxDepartment" fieldName="DepartmentName" fieldValue="DepartmentId" api="/api/v1/departments" class="style-input style-select build-select"></select>
 
                     </div>
                     <div class="choose-department width-choose">
-                        <select id="cbxCustomerGroup" class="style-input style-select">
-                            <option>Tất cả vị trí</option>
-                            <option>Khách VIP</option>
-                            <option>Khách thường</option>
-                            <option>Khách vãng lai</option>
-                        </select>
+                        <select fieldName="PossitionName" fieldValue="PossitionId" api="/api/v1/possitions" class="style-input style-select build-select"></select>
                     </div>
                     <div class="button-action">
                         <div class="action-download"></div>
@@ -145,29 +135,15 @@
                 <!--  Phân trang-->
                 <div class="paging-bar">
                     <div class="paging-record-info">
-                        Hiển thị <b>1-10/1000</b> Khách hàng
+                     <b></b> Nhân viên
                     </div>
-                    <!--<div class="paging-option">
-                        <div class="btn-select-page m-btn-firstpage"></div>
-                        <div class="btn-select-page m-btn-prev-page"></div>
-                        <div class="m-btn-list-page">
-                            <button class="btn-pagenumber-selected btn-pagenumber">1</button>
-                            <button class="btn-pagenumber">2</button>
-                            <button class="btn-pagenumber">3</button>
-                            <button class="btn-pagenumber">4</button>
-                        </div>
-                        <div class="btn-select-page m-btn-next-page"></div>
-                        <div class="btn-select-page m-btn-lastpage"></div>
-                    </div>-->
-                    <div class="paging-record-option">
-                        <b>10</b> Khách hàng/trang
-                    </div>
+                    
                 </div>
             </div>
         </div>
     </div>
     <!--   Dialog thêm mới/chỉnh sửa-->
-    <div id="dialog-form" title="Quản lý khách hàng">
+    <div id="dialog-form" title="Quản lý nhân viên">
         <div class="infor">
 
             <div class="display-flex">
@@ -205,8 +181,8 @@
                     </div>
                     <div class="display-flex">
                         <div class="item item-birth">
-                            <p>Số chứng minh thư nhân dân</p>
-                            <input type="text" fieldName="IdentityNumber" class="style-input" />
+                            <p>Số chứng minh thư nhân dân (<span style="color:red;">*</span>)</p>
+                            <input type="text" fieldName="IdentityNumber" class="style-input input-required" />
                         </div>
                         <div class="item item-birth">
                             <p>Ngày cấp</p>
@@ -273,8 +249,9 @@
 
         </div>
         <div class="btn-bottom-dialog btn-bottom">
-            <button id="btnCancel" class="btn-bottom-cancel">Hủy</button>
+        <div class="btn-bottom-dialog btn-bottom">
             <button id="btnSave" class="btn-bottom-save"><i class="far fa-save"></i><span class="btn-text">Lưu</span></button>
+            <button id="btnCancel" class="btn-bottom-cancel">Hủy</button>
         </div>
     </div>
     <!--    Dialog thông báo xác nhận xoá-->
@@ -289,15 +266,22 @@
             </div>
         </div>
     </div>
-    <!--Thông báo thêm thành công-->
-    <div class="alert-noti">
-        <i class="fas fa-exclamation-triangle"></i><span>Thêm thành công</span><i class="fas fa-times close"></i>
     </div>
-    <!--Thông báo sửa thành công-->
-    <!--Thông báo thêm thất bại-->
-   <!-- Thông báo sửa thất bại-->
-    <!--Thông báo xóa thành công-->
+    <!--Thông báo thành công-->
+    <div id="form-noti-success" class="form-success alert-noti">
+        <div class="noti-left">
+            <div class="border-icon success"><i class="fas fa-check"></i></div><span>Thành công</span>
+        </div>
+    </div>
+
+    <!--Thông báo thất bại-->
+    <div id="form-noti-failed" class="form-failed alert-noti">
+            <div class="noti-left"><div class="border-icon failed"><i class="fas fa-exclamation-triangle"></i></div><span>Thất bại</span></div>
+    </div>
     
+    <!-- Thông báo sửa thất bại-->
+    <!--Thông báo xóa thành công-->
+
 
 
     <script src="/js/common/jquery-3.5.1.min.js"></script>
